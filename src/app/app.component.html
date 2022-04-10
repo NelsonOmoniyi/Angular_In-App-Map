@@ -4,8 +4,10 @@
         <p>This map is a product of Google Maps API</p>
     </div>
     <div class="card" id="map">
-        <agm-map [latitude]="latitude" [longitude]="longitude">
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+            <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChoosen">
 
+            </agm-marker>
         </agm-map>
     </div>
 
